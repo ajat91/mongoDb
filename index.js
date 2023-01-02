@@ -4,7 +4,7 @@ import cors from "cors";
 import userRouter from "./routes/userRoute.js";
 
 const app = express();
-mongoose.connect();
+mongoose.connect('mongodb://localhost:27017/fullstack_db');
 
 const db=mongoose.connection;
 db.on('error',(e)=>console.log(e))
